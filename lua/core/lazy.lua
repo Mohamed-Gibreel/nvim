@@ -13,6 +13,10 @@ end
 
 vim.opt.rtp:prepend(lazypath)
 
+-- require("mason-null-ls").setup({
+    -- ensure_installed = { "stylua", "prettier", "black" }
+-- })
+
 require("lazy").setup {
   spec = LAZY_PLUGIN_SPEC,
   install = {

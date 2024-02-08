@@ -15,6 +15,9 @@ function M.config()
     "tailwindcss",
     "bashls",
     "jsonls",
+    -- "prettier",
+    -- "stylua",
+    -- "black",
   }
 
   require("mason").setup {

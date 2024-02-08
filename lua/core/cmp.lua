@@ -154,6 +154,7 @@ function M.config()
       completion = {
         border = "rounded",
         scrollbar = false,
+        scrolloff = 8,
       },
       documentation = {
         border = "rounded",

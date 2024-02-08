@@ -5,9 +5,10 @@ local M = {
 function M.config()
   local mappings = {
     q = { "<cmd>confirm q<CR>", "Quit" },
-    h = { "<cmd>nohlsearch<CR>", "NOHL" },
+    h = { "<cmd>nohlsearch<CR>", "Clear Search Result" },
     [";"] = { "<cmd>tabnew | terminal<CR>", "Term" },
-    v = { "<cmd>vsplit<CR>", "Split" },
+    v = { "<cmd>vsplit<CR>", "Vertical Split" },
+    ["\\"] = { "<cmd>split<CR>", "Split" },
     b = { name = "Buffers" },
     d = { name = "Debug" },
     f = { name = "Find" },
