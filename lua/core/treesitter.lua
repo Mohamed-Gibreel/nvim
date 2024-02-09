@@ -10,7 +10,7 @@ function M.config()
     auto_install = true,
     sync_install = false,
     modules = {},
-    ensure_installed = { "lua", "markdown", "markdown_inline", "bash", "javascript", "typescript", "tsx" },
+    ensure_installed = { "c", "lua", "vim", "vimdoc", "query", "markdown", "markdown_inline", "bash", "javascript", "typescript", "tsx" },
     highlight = { enable = true },
     indent = { enable = true },
   }
