@@ -10,7 +10,7 @@ local M = {
 function M.config()
   require("core.none-ls")
   require("mason-null-ls").setup({
-    ensure_installed = { "prettier", "stylua", "black" }
+    ensure_installed = { "prettier", "stylua", "black", "pyright", "flake8" }
   })
 end
 
