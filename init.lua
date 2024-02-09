@@ -12,5 +12,8 @@ spec "core.whichkey"
 spec "core.cmp"
 spec "core.none-ls"
 spec "core.mason-none-ls"
+spec "core.telescope"
+spec "core.project"
+spec "core.nvimtree"
 
 require "core.lazy"
