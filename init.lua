@@ -17,5 +17,7 @@ spec "core.project"
 spec "core.nvimtree"
 spec "core.comment"
 spec "core.lualine"
+spec "core.navic"
+spec "core.breadcrumbs"
 
 require "core.lazy"
