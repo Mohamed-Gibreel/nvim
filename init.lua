@@ -3,6 +3,7 @@ require "core.options"
 require "core.keymaps"
 require "core.autocmds"
 
+-- Core plugins
 spec "core.colorscheme"
 spec "core.devicons"
 spec "core.treesitter"
@@ -21,10 +22,15 @@ spec "core.lualine"
 spec "core.navic"
 spec "core.breadcrumbs"
 spec "core.harpoon"
+spec "core.gitsigns"
+spec "core.autopairs"
+
+-- Extras plugins
 spec "core.extras.tabby"
 spec "core.extras.neoscroll"
 spec "core.extras.illuminate"
 spec "core.extras.oil"
 spec "core.extras.ufo"
+spec "core.extras.lab"
 
 require "core.lazy"
