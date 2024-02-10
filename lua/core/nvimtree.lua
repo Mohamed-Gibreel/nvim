@@ -16,7 +16,7 @@ function M.config()
     sync_root_with_cwd = true,
     view = {
       relativenumber = true,
-      side="right"
+      side = "left",
     },
     renderer = {
       add_trailing = false,
@@ -25,7 +25,7 @@ function M.config()
       full_name = false,
       highlight_opened_files = "none",
       root_folder_label = ":t",
-      indent_width = 2,
+      indent_width = 0,
       indent_markers = {
         enable = false,
         inline_arrows = true,
