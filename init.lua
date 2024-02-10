@@ -26,7 +26,7 @@ spec "core.gitsigns"
 spec "core.autopairs"
 spec "core.neogit"
 spec "core.indentline"
--- spec "core.nvim-notify"
+spec "core.nvim-notify"
 
 -- Extras plugins
 spec "core.extras.tabby"
