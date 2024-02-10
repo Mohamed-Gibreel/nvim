@@ -1,6 +1,7 @@
 require "core.launch"
 require "core.options"
 require "core.keymaps"
+require "core.autocmds"
 
 spec "core.colorscheme"
 spec "core.devicons"
@@ -20,5 +21,9 @@ spec "core.lualine"
 spec "core.navic"
 spec "core.breadcrumbs"
 spec "core.harpoon"
+spec "core.extras.tabby"
+spec "core.extras.neoscroll"
+spec "core.extras.illuminate"
+spec "core.extras.oil"
 
 require "core.lazy"
