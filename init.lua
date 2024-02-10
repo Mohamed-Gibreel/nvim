@@ -24,6 +24,7 @@ spec "core.breadcrumbs"
 spec "core.harpoon"
 spec "core.gitsigns"
 spec "core.autopairs"
+spec "core.neogit"
 
 -- Extras plugins
 spec "core.extras.tabby"
