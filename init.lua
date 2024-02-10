@@ -34,5 +34,6 @@ spec "core.extras.illuminate"
 spec "core.extras.oil"
 spec "core.extras.ufo"
 spec "core.extras.lab"
+spec "core.extras.fidget"
 
 require "core.lazy"
