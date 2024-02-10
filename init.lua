@@ -25,6 +25,7 @@ spec "core.harpoon"
 spec "core.gitsigns"
 spec "core.autopairs"
 spec "core.indentline"
+spec "core.lazygit"
 
 -- Extras plugins
 spec "core.extras.tabby"
