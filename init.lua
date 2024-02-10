@@ -15,5 +15,7 @@ spec "core.mason-none-ls"
 spec "core.telescope"
 spec "core.project"
 spec "core.nvimtree"
+spec "core.comment"
+spec "core.lualine"
 
 require "core.lazy"
