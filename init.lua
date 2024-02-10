@@ -19,5 +19,6 @@ spec "core.comment"
 spec "core.lualine"
 spec "core.navic"
 spec "core.breadcrumbs"
+spec "core.harpoon"
 
 require "core.lazy"
