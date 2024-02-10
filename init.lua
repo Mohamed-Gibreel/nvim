@@ -25,5 +25,6 @@ spec "core.extras.tabby"
 spec "core.extras.neoscroll"
 spec "core.extras.illuminate"
 spec "core.extras.oil"
+spec "core.extras.ufo"
 
 require "core.lazy"
