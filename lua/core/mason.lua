@@ -15,6 +15,7 @@ function M.config()
     "tailwindcss",
     "bashls",
     "jsonls",
+    "clangd",
     -- "prettier",
     -- "stylua",
     -- "black",

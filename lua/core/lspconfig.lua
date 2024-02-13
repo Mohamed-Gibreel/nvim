@@ -69,6 +69,7 @@ function M.config()
     "lua_ls",
     "cssls",
     "html",
+    "clangd",
     "eslint",
     "tsserver",
     "pyright",
