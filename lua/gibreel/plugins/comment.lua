@@ -17,12 +17,9 @@ return {
 			pre_hook = ts_context_commentstring.create_pre_hook(),
 		})
 
-		wk.register({
-			["<leader>/"] = { "<Plug>(comment_toggle_linewise_current)", "Comment" },
-		})
-
-		wk.register({
-			["<leader>/"] = { "<Plug>(comment_toggle_linewise_visual)", "Comment", mode = "v" },
+		wk.add({
+			{ "<leader>/", "<Plug>(comment_toggle_linewise_current)", desc = "Comment" },
+			{ "<leader>/", "<Plug>(comment_toggle_linewise_visual)", desc = "Comment", mode = "v" },
 		})
 	end,
 }
