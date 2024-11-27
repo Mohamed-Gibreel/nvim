@@ -28,11 +28,13 @@ return {
 		mason_lspconfig.setup({
 			-- List of servers for mason to install
 			ensure_installed = {
-				"tsserver",
+				-- "tsserver", # Deprecated
+				"ts_ls",
 				"html",
 				"cssls",
 				"tailwindcss",
 				"svelte",
+				"clangd",
 				"lua_ls",
 				"graphql",
 				"emmet_ls",
@@ -43,12 +45,13 @@ return {
 
 		mason_tool_installer.setup({
 			ensure_installed = {
-				"prettier",
+				"prettierd",
 				"stylua",
 				"isort",
 				"black",
 				"pylint",
-				"eslint_d",
+				-- "prettier",
+				-- "eslint_d",
 			},
 		})
 	end,
