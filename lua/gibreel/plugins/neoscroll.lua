@@ -24,10 +24,10 @@ function M.config()
 		performance_mode = false, -- Disable "Performance Mode" on all buffers.
 	})
 
-	local t = {}
+	-- local t = {}
 	-- Syntax: t[keys] = {function, {function arguments}}
-	t["<C-u>"] = { "scroll", { "-vim.wo.scroll", "true", "250" } }
-	t["<C-d>"] = { "scroll", { "vim.wo.scroll", "true", "250" } }
+	-- t["<C-u>"] = { "ctrl_u", { "250" } }
+	-- t["<C-d>"] = { "ctrl_d", { "250" } }
 	-- t["<C-k>"] = { "scroll", { "-vim.wo.scroll", "true", "250" } }
 	-- t["<C-j>"] = { "scroll", { "vim.wo.scroll", "true", "250" } }
 	-- t["<C-b>"] = { "scroll", { "-vim.api.nvim_win_get_height(0)", "true", "450" } }
@@ -38,7 +38,22 @@ function M.config()
 	-- t["zz"] = { "zz", { "250" } }
 	-- t["zb"] = { "zb", { "250" } }
 
-	require("neoscroll.config").set_mappings(t)
+	-- require("neoscroll.config").set_mappings(t)
+
+	local neoscroll = require("neoscroll")
+
+	local keymap = {
+		["<C-u>"] = function()
+			neoscroll.ctrl_u({ duration = 250 })
+		end,
+		["<C-d>"] = function()
+			neoscroll.ctrl_d({ duration = 250 })
+		end,
+	}
+	local modes = { "n", "v", "x" }
+	for key, func in pairs(keymap) do
+		vim.keymap.set(modes, key, func)
+	end
 end
 
 return M

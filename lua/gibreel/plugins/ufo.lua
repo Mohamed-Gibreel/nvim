@@ -69,12 +69,11 @@ function M.config()
 	require("ufo").setup({
 		open_fold_hl_timeout = 0,
 		enable_get_fold_virt_text = true,
-		close_fold_kinds_for_ft = {},
 
 		fold_virt_text_handler = handler,
 		close_fold_kinds = {},
 		-- close_fold_kinds = { "imports", "comment" },
-		provider_selector = function(_, filetype, _)
+		provider_selector = function(bufnr, filetype, buftype)
 			-- if you prefer treesitter provider rather than lsp,
 			-- return ftMap[filetype] or {'treesitter', 'indent'}
 			return ftMap[filetype]

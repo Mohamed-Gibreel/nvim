@@ -19,8 +19,8 @@ return {
 						["<C-j>"] = actions.move_selection_next, -- move to next result
 						["<C-q>"] = actions.send_selected_to_qflist + actions.open_qflist,
 						["<C-x>"] = actions.delete_buffer,
-						["<C-\\>"] = actions.file_vsplit,
-						["<C->-"] = actions.file_split,
+						["<C-v>"] = actions.file_vsplit,
+						["<C-h>"] = actions.file_split,
 					},
 				},
 			},
@@ -28,8 +28,14 @@ return {
 				colorscheme = {
 					enable_preview = true,
 				},
+				buffers = {
+					ignore_current_buffer = true,
+					sort_lastused = true,
+				},
 			},
 		})
+
+		-- builtin.buffers({ sort_lastused = true, ignore_current_buffer = true })
 
 		telescope.load_extension("fzf")
 
@@ -46,7 +52,7 @@ return {
 			{ desc = "Find string under cursor in current file" }
 		)
 		keymap.set("n", "<leader>cs", "<cmd>Telescope colorscheme<cr>", { desc = "Open color scheme" })
-		keymap.set("n", "<leader>bb", "<cmd>Telescope buffers previewer=false<cr>", { desc = "Open buffers" })
+		keymap.set("n", "<leader>bb", "<cmd>Telescope buffers<cr>", { desc = "Open buffers" })
 		keymap.set(
 			"n",
 			"<leader>fp",

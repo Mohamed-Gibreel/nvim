@@ -33,7 +33,13 @@ return {
 				keymap.set("n", "gD", vim.lsp.buf.declaration, opts) -- go to declaration
 
 				opts.desc = "Show LSP definitions"
-				keymap.set("n", "gd", "<cmd>Telescope lsp_definitions<CR>", opts) -- show lsp definitions
+				keymap.set("n", "gdd", "<cmd>Telescope lsp_definitions<CR>", opts) -- show lsp definitions
+
+				opts.desc = "Show LSP definitions in vertical split"
+				keymap.set("n", "gdv", ":vsplit<CR> <cmd>Telescope lsp_definitions<CR>", opts) -- show lsp definitions
+
+				opts.desc = "Show LSP definitions in horizontal split"
+				keymap.set("n", "gdh", ":split<CR> <cmd>Telescope lsp_definitions<CR>", opts) -- show lsp definitions
 
 				opts.desc = "Show LSP implementations"
 				keymap.set("n", "gi", "<cmd>Telescope lsp_implementations<CR>", opts) -- show lsp implementations
@@ -89,7 +95,7 @@ return {
 				-- configure svelte server
 				lspconfig["svelte"].setup({
 					capabilities = capabilities,
-					on_attach = function(client, _)
+					on_attach = function(client, bufnr)
 						vim.api.nvim_create_autocmd("BufWritePost", {
 							pattern = { "*.js", "*.ts" },
 							callback = function(ctx)
@@ -136,6 +142,19 @@ return {
 							completion = {
 								callSnippet = "Replace",
 							},
+						},
+					},
+				})
+			end,
+			["ts_ls"] = function()
+				-- configure lua server (with special settings)
+				lspconfig["ts_ls"].setup({
+					capabilities = capabilities,
+					init_options = {
+						preferences = {
+							-- other preferences...
+							importModuleSpecifierPreference = "relative",
+							importModuleSpecifierEnding = "minimal",
 						},
 					},
 				})
