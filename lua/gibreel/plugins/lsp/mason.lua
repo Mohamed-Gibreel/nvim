@@ -27,6 +27,7 @@ return {
 
 		mason_lspconfig.setup({
 			-- List of servers for mason to install
+			automatic_installation = false,
 			ensure_installed = {
 				-- "tsserver", # Deprecated
 				"ts_ls",
@@ -34,6 +35,7 @@ return {
 				"cssls",
 				"tailwindcss",
 				"svelte",
+				"ast_grep",
 				"clangd",
 				"lua_ls",
 				"graphql",
