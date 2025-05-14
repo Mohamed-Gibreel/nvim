@@ -23,7 +23,7 @@ keymap.set("n", "<leader>tp", "<cmd>tabp<CR>", { desc = "Go to previous tab" })
 
 keymap.set("n", "<leader>tf", "<cmd>tabnew %<CR>", { desc = "Open current buffer in new tab" })
 
-keymap.set("n", "_", "<cmd>Oil --float<CR>", { desc = "Open oil explorer" })
+keymap.set("n", "-", "<cmd>Oil --float<CR>", { desc = "Open oil explorer" })
 
 -- Stay in indent mode
 keymap.set("v", "<", "<gv", opts)
