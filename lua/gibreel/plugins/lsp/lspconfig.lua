@@ -106,6 +106,30 @@ return {
 					end,
 				})
 			end,
+			["ast_grep"] = function()
+				local util = require("lspconfig.util")
+				lspconfig["ast_grep"].setup({
+					default_config = {
+						cmd = { "ast-grep", "lsp" },
+						filetypes = { -- https://ast-grep.github.io/reference/languages.html
+							-- "c",
+							-- "cpp",
+							-- "rust",
+							-- "go",
+							-- "java",
+							-- "python",
+							-- "javascript",
+							-- "typescript",
+							"html",
+							"css",
+							-- "kotlin",
+							"dart",
+							-- "lua",
+						},
+						root_dir = util.root_pattern("sgconfig.yaml", "sgconfig.yml"),
+					},
+				})
+			end,
 			["graphql"] = function()
 				-- configure graphql language server
 				lspconfig["graphql"].setup({
