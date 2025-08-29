@@ -1,8 +1,8 @@
 return {
 	"williamboman/mason.nvim",
-	version = "1.11.0",
+	version = "2.0.1",
 	dependencies = {
-		{ "williamboman/mason-lspconfig.nvim", version = "1.32.0" },
+		{ "williamboman/mason-lspconfig.nvim", version = "2.1.0" },
 		"WhoIsSethDaniel/mason-tool-installer.nvim",
 	},
 	config = function()
@@ -13,7 +13,7 @@ return {
 		local mason_lspconfig = require("mason-lspconfig")
 
 		-- Import mason-tool-installer
-		local mason_tool_installer = require("mason-tool-installer")
+		-- local mason_tool_installer = require("mason-tool-installer")
 
 		-- Enable mason and configure icons
 		mason.setup({
@@ -39,23 +39,25 @@ return {
 				"ast_grep",
 				"clangd",
 				"lua_ls",
-				"graphql",
+				-- "graphql",
 				"emmet_ls",
 				"prismals",
 				"pyright",
 			},
 		})
 
-		mason_tool_installer.setup({
-			ensure_installed = {
-				"prettierd",
-				"stylua",
-				"isort",
-				"black",
-				"pylint",
-				-- "prettier",
-				-- "eslint_d",
-			},
-		})
+		-- TODO: Mason Tool installer is still not compataible with Mason v2.0.0
+
+		-- mason_tool_installer.setup({
+		-- 	ensure_installed = {
+		-- 		"prettierd",
+		-- 		"stylua",
+		-- 		"isort",
+		-- 		"black",
+		-- 		"pylint",
+		-- 		-- "prettier",
+		-- 		-- "eslint_d",
+		-- 	},
+		-- })
 	end,
 }
